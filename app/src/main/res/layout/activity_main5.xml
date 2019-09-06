@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Main5Activity"
+    android:background="#12345678"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/holo_orange_dark"
+        android:weightSum="1">
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Food Court"
+            android:textColor="@android:color/black"
+            android:textSize="30pt" />
+    </RelativeLayout>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="390dp"
+        android:layout_weight="8"
+        android:alignmentMode="alignMargins"
+        android:columnCount="2"
+        android:columnOrderPreserved="false"
+        android:padding="14dp"
+        android:rowCount="3">
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="8dp"
+            android:layout_height="280dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageButton
+
+                android:id="@+id/log"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:srcCompat="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Register / My Account"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="13pt"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <ImageButton
+
+
+                android:id="@+id/btt1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:srcCompat="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="16pt"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="8"
+            android:layout_columnWeight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <Button
+                android:id="@+id/btt2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:text="Delivery Address"
+                android:textSize="9pt"
+
+                android:textStyle="bold" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_rowWeight="8"
+            android:layout_columnWeight="1"
+            android:background="@android:color/holo_orange_light"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/holo_orange_light"
+                android:text="About Us"
+                android:textStyle="bold"
+                android:textSize="10pt"
+                />
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</LinearLayout>

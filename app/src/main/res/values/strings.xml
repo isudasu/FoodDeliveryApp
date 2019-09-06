@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="btn">my view</string>
+    <string name="crdv">crd1</string>
+    <string name="your_address">YOUR ADDRESS</string>
+    <string name="next">NEXT</string>
+    <string name="add_new_address">ADD NEW ADDRESS</string>
+    <string name="to_proceed_please_confirm_your_delivery_details">to_proceed_please_confirm_your_delivery_details</string>
+    <string name="delivery_address">delivery_address</string>
+    <string name="delivery_date">delivery_date</string>
+    <string name="please_select_delivery_date_and_time">please_select_delivery_date_and_time</string>
+    <string name="change_address">change_address</string>
+    <string name="proceed_to_order">proceed_to_order</string>
+    <string name="menu">Menu</string>
+    <string name="beverages">Beverages</string>
+    <string name="more_shopping">more Shopping</string>
+    <string name="total_price">Total Price</string>
+    <string name="update">update</string>
+    <string name="rs_1500">Rs.1500/=</string>
+    <string name="m">(M)</string>
+    <string name="pizza">pizza</string>
+    <string name="cash">Cash</string>
+    <string name="credit_or_debit_cards">Credit or Debit cards</string>
+    <string name="bank_transfer_xxxxxxxx">Bank Transfer(xxxxxxxx)</string>
+    <string name="confirm">Confirm</string>
+    <string name="reject">Reject</string>
+    <string name="submit">Submit</string>
+    <string name="select_payment_method">Select Payment Method...</string>
+    <string name="no_any_orders_yet">no any orders yet</string>
+    <string name="my_total">My Total</string>
+</resources>
