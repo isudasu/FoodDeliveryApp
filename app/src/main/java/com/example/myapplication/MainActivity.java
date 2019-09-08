@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openactivity3(){
-        Intent intent = new Intent(MainActivity.this,Main2Activity.class);
+        Intent intent = new Intent(MainActivity.this,foodMenu.class);
         startActivity(intent);
     }
 
