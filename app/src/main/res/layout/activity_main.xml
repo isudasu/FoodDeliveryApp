@@ -67,10 +67,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pizza"
+                    android:text="Macdonald"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_red_light"
-                    android:textSize="18pt"
+                    android:textSize="14pt"
                     android:textStyle="bold" />
 
             </LinearLayout>
@@ -106,7 +106,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Noodles"
+                    android:text="KFC"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_red_light"
                     android:textSize="14pt"
@@ -143,7 +143,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sandwich"
+                    android:text="Pizza Hut"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_red_light"
                     android:textSize="12pt"
@@ -180,7 +180,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Shawarma"
+                    android:text="juice Bar"
                     android:textAlignment="center"
                     android:textColor="@android:color/holo_red_light"
                     android:textSize="11pt"

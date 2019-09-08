@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#12345678"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".foodMenu">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Menu"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_orange_dark"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        >
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Veggie Burger(RS.420)"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        />
+
+        <Button
+            android:id="@+id/Mb1"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="add"
+            android:text="ADD" />
+</LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="2"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Chicken Burger (Rs.400)"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Mb2"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="add"
+            android:text="ADD" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="2"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Grilled Chicken Burger       (Rs.550)"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Mb3"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="add"
+            android:text="ADD" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="2"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Chicken Fried Rice(Rs.300)"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Mb4"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="add"
+            android:text="ADD" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:weightSum="2"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Chicken Wings(Rs.270)"
+            android:textSize="20dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/Mb5"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_light"
+            android:onClick="add"
+            android:text="ADD" />
+    </LinearLayout>
+<LinearLayout
+    android:layout_marginTop="100dp"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    >
+
+    <Button
+        android:id="@+id/ViewCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="viewCart"
+        android:text="View cart"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+</LinearLayout>
+</LinearLayout>
