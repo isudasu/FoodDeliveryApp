@@ -16,8 +16,8 @@ public class foodCart extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_food_cart);
 
-        cartList = (TextView) findViewById(R.id.cartList);
-        priceView =(TextView) findViewById(R.id.priceView);
+        cartList = findViewById(R.id.cartList);
+        priceView = findViewById(R.id.priceView);
 
         Bundle bundle = getIntent().getExtras();
         list_food = bundle.getString("food");
@@ -25,6 +25,6 @@ public class foodCart extends AppCompatActivity {
 
 
          cartList.setText(list_food);
-        priceView.setText((int) price1);
+        priceView.setText(String.valueOf(price1));
     }
 }
