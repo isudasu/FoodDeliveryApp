@@ -24,9 +24,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="@string/menu"
+            android:text="Choose a restaurant"
             android:textColor="@android:color/black"
-            android:textSize="34pt" />
+            android:textSize="16pt" />
     </RelativeLayout>
 
     <GridLayout
