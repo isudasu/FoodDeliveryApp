@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -56,6 +57,14 @@ public class foodMenu extends AppCompatActivity {
         }
 
     }
+public void viewCart(View view){
+    Intent i = new Intent(foodMenu.this,foodCart.class);
+    Bundle bundle = new Bundle();
+    bundle.putString("food",food);
+    bundle.putDouble("price",price);
+    i.putExtras(bundle);
+    startActivity(i);
 
+}
 
 }
