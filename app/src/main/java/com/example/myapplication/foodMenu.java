@@ -58,12 +58,12 @@ public class foodMenu extends AppCompatActivity {
 
     }
 public void viewCart(View view){
-    Intent i = new Intent(foodMenu.this,foodCart.class);
+    Intent intent = new Intent(foodMenu.this,foodCart.class);
     Bundle bundle = new Bundle();
     bundle.putString("food",food);
     bundle.putDouble("price",price);
-    i.putExtras(bundle);
-    startActivity(i);
+    intent.putExtras(bundle);
+    startActivity(intent);
 
 }
 
