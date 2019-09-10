@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:background="#F7F2F2"
-        android:text="   Meet atvehicles"
+        android:text="   Meet at vehicles"
         android:textSize="18sp" />
 
     <EditText
