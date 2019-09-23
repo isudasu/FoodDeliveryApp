@@ -1,71 +1,87 @@
 package com.example.myapplication;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Main6Activity extends AppCompatActivity {
-    public static final String EXTRA_TEXT ="com.example.application.example.EXTRA_TEXT";
-
+    DeliveryDbHelper myDb;
+    EditText edName, edSurname, edMarks, txtStreet, txtArea, txtVehicles, txtDelivery, txtSpecial;
+    Button btnSave;
+    Button btnNext;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main6);
 
-        Button button = (Button) findViewById(R.id.btnSave);
-        button.setOnClickListener(new View.OnClickListener() {
+        myDb = new DeliveryDbHelper(this);
+
+        edName = (EditText)findViewById(R.id.etName);
+        edSurname = (EditText)findViewById(R.id.etSurname);
+        edMarks = (EditText)findViewById(R.id.etMarks);
+        txtStreet =(EditText)findViewById(R.id.txtStreet);
+        txtArea =(EditText)findViewById(R.id.txtArea);
+        txtVehicles = (EditText)findViewById(R.id.txtVehicle);
+        txtDelivery = (EditText)findViewById(R.id.txtDelivery);
+        txtSpecial = (EditText)findViewById(R.id.txtSpecial);
+        btnSave = (Button) findViewById(R.id.btnSave);
+        btnNext = (Button)findViewById(R.id.btnNext);
+        AddData();
+
+        btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                save();
+            public void onClick(View v) {
+                openActivity2();
             }
         });
     }
 
-    public void save(){
-        EditText editText1 = (EditText) findViewById(R.id.txtAddress);
-        String txt2 = editText1.getText().toString();
+    public void AddData(){
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean isInserted = myDb.insertData(edName.getText().toString(), edSurname.getText().toString(), edMarks.getText().toString(),
+                        txtStreet.getText().toString(), txtArea.getText().toString(), txtVehicles.getText().toString(),
+                        txtDelivery.getText().toString(),txtSpecial.getText().toString());
+                if (isInserted == true)
+                    if (edName.getText().toString().equals("") || edSurname.getText().toString().equals("") || edMarks.getText().toString().equals("") || txtStreet.getText().toString().equals("") || txtArea.getText().toString().equals("") || txtVehicles.getText().toString().equals("") ||
+                            txtDelivery.getText().toString().equals("") || txtSpecial.getText().toString().equals("")) {
 
-        EditText editText2 = (EditText) findViewById(R.id.txtFloor);
-        String txt3 = editText2.getText().toString();
+                        AlertDialog.Builder builder = new AlertDialog.Builder(Main6Activity.this);
+                        builder.setTitle("Error");
+                        builder.setMessage("Some Details are Empty.!").
+                                setCancelable(false);
 
-        EditText editText3 = (EditText) findViewById(R.id.txtName);
-        String txt4 = editText3.getText().toString();
+                        builder.setPositiveButton("Close", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
 
-        EditText editText4 = (EditText) findViewById(R.id.txtStreet);
-        String txt5 = editText4.getText().toString();
+                            }
+                        });
+                        builder.create().show();
 
-        EditText editText5 = (EditText) findViewById(R.id.txtArea);
-        String txt6 = editText5.getText().toString();
+                    }else
+                        Toast.makeText(Main6Activity.this,"Data Inserted", Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(Main6Activity.this,"Data not Inserted", Toast.LENGTH_LONG).show();
 
-        EditText editText6 = (EditText) findViewById(R.id.txtLandmark);
-        String txt7 = editText6.getText().toString();
+            }
+        });
+    }
 
-        EditText editText7 = (EditText) findViewById(R.id.txtDelivery);
-        String txt8 = editText7.getText().toString();
 
-        EditText editText8 = (EditText) findViewById(R.id.txtLabel);
-        String txt9 = editText8.getText().toString();
 
-        EditText editText9 = (EditText) findViewById(R.id.editText8);
-        String txt10 = editText9.getText().toString();
-
-        Intent intent = new Intent(this, Display.class);
-        intent.putExtra(EXTRA_TEXT, txt2);
-        intent.putExtra(EXTRA_TEXT, txt3);
-        intent.putExtra(EXTRA_TEXT, txt4);
-        intent.putExtra(EXTRA_TEXT, txt5);
-        intent.putExtra(EXTRA_TEXT, txt6);
-        intent.putExtra(EXTRA_TEXT, txt7);
-        intent.putExtra(EXTRA_TEXT, txt8);
-        intent.putExtra(EXTRA_TEXT, txt9);
-        intent.putExtra(EXTRA_TEXT, txt10);
+    public void openActivity2(){
+        Intent intent = new Intent(this, Buttons.class);
         startActivity(intent);
     }
+
 }
-
-
