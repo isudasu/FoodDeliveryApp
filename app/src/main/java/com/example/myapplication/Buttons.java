@@ -27,6 +27,13 @@ public class Buttons extends AppCompatActivity {
         btnDelete = (Button)findViewById(R.id.btnDelete);
         btnNextPage = (Button)findViewById(R.id.btnNextPage);
         ViewAll();
+
+        btnNxtUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openActivity3();
+            }
+        });
     }
 
     public void ViewAll() {
@@ -50,6 +57,11 @@ public class Buttons extends AppCompatActivity {
             }
 
         });
+    }
+
+    public void openActivity3(){
+        Intent intent = new Intent(this, UpdateAddress.class);
+        startActivity(intent);
     }
 
 
